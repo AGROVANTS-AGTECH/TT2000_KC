@@ -36,7 +36,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[-33.68183085106391,-69.09457148145238],[-33.62218033004835,-69.00846001955539]]);
+        }).fitBounds([[-33.716608087650926,-69.20910955412481],[-33.65695756663537,-69.12299809222782]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -68,15 +68,15 @@
         });
         layer_OpenStreetMap_0;
         map.addLayer(layer_OpenStreetMap_0);
-        map.createPane('pane_TT2000NDVIINDEX_1');
-        map.getPane('pane_TT2000NDVIINDEX_1').style.zIndex = 401;
-        var img_TT2000NDVIINDEX_1 = 'data/TT2000NDVIINDEX_1.png';
-        var img_bounds_TT2000NDVIINDEX_1 = [[-34.428382422000006,-69.206568815],[-32.610461781,-68.04675395133685]];
-        var layer_TT2000NDVIINDEX_1 = new L.imageOverlay(img_TT2000NDVIINDEX_1,
-                                              img_bounds_TT2000NDVIINDEX_1,
-                                              {pane: 'pane_TT2000NDVIINDEX_1'});
-        bounds_group.addLayer(layer_TT2000NDVIINDEX_1);
-        map.addLayer(layer_TT2000NDVIINDEX_1);
+        map.createPane('pane_TT2000KCINDEX_1');
+        map.getPane('pane_TT2000KCINDEX_1').style.zIndex = 401;
+        var img_TT2000KCINDEX_1 = 'data/TT2000KCINDEX_1.png';
+        var img_bounds_TT2000KCINDEX_1 = [[-34.42838242147262,-69.206568815],[-32.61046178099999,-68.04674517228982]];
+        var layer_TT2000KCINDEX_1 = new L.imageOverlay(img_TT2000KCINDEX_1,
+                                              img_bounds_TT2000KCINDEX_1,
+                                              {pane: 'pane_TT2000KCINDEX_1'});
+        bounds_group.addLayer(layer_TT2000KCINDEX_1);
+        map.addLayer(layer_TT2000KCINDEX_1);
         function pop_propiedades_mza_29112020_2(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -132,7 +132,7 @@
         bounds_group.addLayer(layer_propiedades_mza_29112020_2);
         map.addLayer(layer_propiedades_mza_29112020_2);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/propiedades_mza_29112020_2.png" /> propiedades_mza_29112020': layer_propiedades_mza_29112020_2,"TT2000 - NDVI INDEX": layer_TT2000NDVIINDEX_1,"OpenStreetMap": layer_OpenStreetMap_0,},{collapsed:false}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/propiedades_mza_29112020_2.png" /> propiedades_mza_29112020': layer_propiedades_mza_29112020_2,"TT2000 - KC INDEX ": layer_TT2000KCINDEX_1,"OpenStreetMap": layer_OpenStreetMap_0,},{collapsed:false}).addTo(map);
         setBounds();
         L.ImageOverlay.include({
             getBounds: function () {
